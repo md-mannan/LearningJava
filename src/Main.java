@@ -6,14 +6,35 @@ public class Main {
     public static void main(String[] args) {
 //        Assignment
 //        1 .Take Input from User and inform him its Vowel or Consonant
+//        make same task by switch
+
       char ch;
         Scanner input=new Scanner(System.in);
         System.out.print("Enter A Character :");
         ch=input.next().charAt(0);
-        if(ch=='a' ||ch=='A' || ch=='e' ||ch=='E' ||ch=='i' ||ch=='o' ||ch=='O' ||ch=='u' || ch=='U'){
-            System.out.print(ch+" is a Vowel");
+
+        if (ch>='a' && ch<='z' || ch>='A' && ch<='Z' ){
+            switch (ch){
+                case 'a':
+                case 'A':
+                case 'e':
+                case 'E':
+                case 'i':
+                case 'I':
+                case 'o':
+                case 'O':
+                case 'u':
+                case 'U':
+                    System.out.print("'"+ch+"'  is a Vowel");
+                    break;
+                default:
+                    System.out.print("'"+ch+"'  is a Consonant");
+            }
+
         }else {
-            System.out.print(ch+" is a Consonant");
+            System.out.print("It a not a letter");
         }
+
+
     }
 }
